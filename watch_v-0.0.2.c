@@ -2,7 +2,7 @@
   Digital Watch Project Developed by 
   Ferdous Mahmud Akash
   Started at - 26 July 2020
-  Version - 0.0.01
+  Version - 0.0.02
   System - Linux (Ubuntu)
   Language - C
 */
@@ -18,6 +18,12 @@
 #endif
 int main()
 {
+
+ printf("What do you want to use?\n#1.For digital watch enter 1\n#2.For stopwatch enter 2\n");
+   int func;
+   scanf("%d",&func);
+   if (func == 2)
+   {
     int hour , minute , second;
     printf("Enter Hour Minute Second : ");
     //Input value from user
@@ -55,6 +61,51 @@ int main()
       	 h++;
       	 m = 0;
       }
+    }
+    }
+    
+    // **** Digital watch Start ****
+    else
+    {
+    int h, m, s;
+    printf("Set Time -- Hour:Minute:Second : ");
+    //Input value from user
+    scanf("%d%d%d",&h,&m,&s);
+    
+    clrscr(); // function for clear secreen
+    
+    //logical part for digital watch
+    while(1)
+    {
+      printf("\n\n####### Digital WATCH #######\n\n\n");
+      printf("           %.2d:%.2d:%.2d\n",h,m,s);
+      printf("\n\n#############################\n\n\n");
+      
+      if(h == 24)
+      {  
+         h = 0;
+         m = 0;
+         s = 0;
+         printf("\n\n## ---- New Day Start ---- ##\n\n\n");
+      }
+      else
+      {
+      	 clrscr();// clearing screen
+      }
+      s++;
+      sleep(1);// sleep function for wait 1 second
+      
+      if(s == CYCLE)
+      {
+      	 m++;
+      	 s = 0;
+      }
+      if(m == CYCLE)
+      {
+      	 h++;
+      	 m = 0;
+      }
+    }
     }
 	return 0;
 }
