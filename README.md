@@ -9,4 +9,6 @@ I am tryint to build a terminal based app for stop watch on version 0.0.1.
 
 #new version added on 26 july 2020 (Final Version)
 
+#Added beep option on version 0.0.2 
+
 
