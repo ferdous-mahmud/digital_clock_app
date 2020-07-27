@@ -37,11 +37,11 @@ int main()
     while(1)
     {
       printf("\n\n####### STOP WATCH #######\n\n\n");
-      printf("         %.2d:%.2d:%.2d\n",h,m,s);
+      printf("         \a%.2d:%.2d:%.2d\n",h,m,s);
       printf("\n\n##########################\n\n\n");
       if(h == hour && m == minute && s == second)
       {  
-         printf("\n\n## ---- Time Limit End ---- ##\n\n\n");
+         printf("\n\n\a## ---- Time Limit End ---- ##\n\n\n");
          break;
       }
       else
